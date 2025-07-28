@@ -34,8 +34,8 @@
             combines beaten eggs cooked to perfection, optionally filled with
             your choice of cheese, vegetables, or meats.
           </p>
-          <section class="preparation-time">
-            <h3>Preparation time</h3>
+          <section class="preparation-time" aria-labelledby="prep-time">
+            <h2 id="prep-time">Preparation time</h2>
             <ul>
               <li>
                 <strong>Total:</strong> Approximately 10 minutes
@@ -48,8 +48,8 @@
               </li>
             </ul>
           </section>
-          <section class="recipe-section ingredients">
-            <h2>Ingredients</h2>
+          <section class="recipe-section ingredients" aria-labelledby="ingredients">
+            <h2 id="ingredients">Ingredients</h2>
             <ul>
               <li>2-3 large eggs</li>
               <li>Salt, to taste</li>
@@ -61,8 +61,8 @@
               </li>
             </ul>
           </section>
-          <section class="recipe-section instructions">
-            <h2>Instructions</h2>
+          <section class="recipe-section instructions" aria-labelledby="instructions">
+            <h2 id="instructions">Instructions</h2>
             <ol>
               <li>
                 <strong>Beat the eggs:</strong> In a bowl, beat the eggs with
@@ -97,13 +97,19 @@
               </li>
             </ol>
           </section>
-          <section class="recipe-section">
-            <h2>Nutrition</h2>
+          <section class="recipe-section" aria-labelledby="nutrition">
+            <h2 id="nutrition">Nutrition</h2>
             <p>
               The table below shows nutritional values per serving without the
               additional fillings.
             </p>
-            <table class="nutrition-table">
+            <table class="nutrition-table" aria-label="Nutritional information per serving">
+              <thead>
+                <tr>
+                  <th scope="col">Nutrient</th>
+                  <th scope="col">Amount</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr class="row">
                   <td class="col">Calories</td>
