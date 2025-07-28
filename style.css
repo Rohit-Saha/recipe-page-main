@@ -120,9 +120,11 @@ ul li span {
   border-radius: 20px;
 }
 
-.preparation-time h3 {
+/* Update h2/h3 hierarchy for preparation time */
+.preparation-time h2 {
   color: var(--primary-color-raspberry);
   padding-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 .preparation-time ul li::marker {
@@ -133,7 +135,7 @@ ul li span {
   margin-right: 5px;
 }
 
-.receipe-section {
+.recipe-section {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 30px;
@@ -141,35 +143,43 @@ ul li span {
   border-bottom: 2px solid var(--neutral-color-light-grey);
 }
 
-.receipe-section:last-of-type {
+.recipe-section:last-of-type {
   border-bottom: none;
   padding-bottom: 0;
 }
 
-.receipe-section > * {
+.recipe-section > * {
   margin-bottom: 10px;
 }
 
-.receipe-section:last-child {
+.recipe-section:last-child {
   margin-bottom: 0;
 }
 
-.receipe-section h2 {
+.recipe-section h2 {
   color: var(--primary-color-nutmeg);
 }
 
-.receipe-section ul li::marker {
+.recipe-section ul li::marker {
   color: var(--primary-color-nutmeg);
 }
 
-.instructions ul {
+.instructions ol {
   list-style-type: decimal;
 }
 
-.nutrition-table .row {
-  display: flex;
-  width: 100%;
+/* Style for table headers */
+.nutrition-table thead {
+  display: none; /* Hide visual headers while keeping them for screen readers */
+}
 
+.nutrition-table {
+  width: 100%;
+}
+
+.nutrition-table .row {
+  display: table-row;
+  width: 100%;
   border-bottom: 2px solid var(--neutral-color-light-grey);
 }
 
@@ -178,6 +188,7 @@ ul li span {
 }
 
 .nutrition-table .row .col {
+  display: table-cell;
   width: 50%;
   padding: 10px 25px;
 }
@@ -185,6 +196,19 @@ ul li span {
 .nutrition-table .row .col.value {
   color: var(--primary-color-nutmeg);
   font-weight: 600;
+}
+
+/* Attribution styles moved from inline */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  background-color: hsl(30, 54%, 90%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media only screen and (max-width: 500px) {
@@ -227,78 +251,5 @@ ul li span {
   .content-info > p {
     margin-top: 10px;
     margin-bottom: 20px;
-  }
-
-  .preparation-time {
-    padding: 20px;
-    background-color: var(--neutral-color-rose-white);
-    border-radius: 20px;
-  }
-
-  .preparation-time h3 {
-    color: var(--primary-color-raspberry);
-    padding-bottom: 10px;
-  }
-
-  .preparation-time ul li::marker {
-    color: var(--primary-color-raspberry);
-  }
-
-  .preparation-time ul li span strong {
-    margin-right: 5px;
-  }
-
-  .receipe-section {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-bottom: 2px solid var(--neutral-color-light-grey);
-  }
-
-  .receipe-section:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .receipe-section > * {
-    margin-bottom: 10px;
-  }
-
-  .receipe-section:last-child {
-    margin-bottom: 0;
-  }
-
-  .receipe-section h2 {
-    color: var(--primary-color-nutmeg);
-  }
-
-  .receipe-section ul li::marker {
-    color: var(--primary-color-nutmeg);
-  }
-
-  .instructions ul {
-    list-style-type: decimal;
-  }
-
-  .nutrition-table .row {
-    display: flex;
-    width: 100%;
-
-    border-bottom: 2px solid var(--neutral-color-light-grey);
-  }
-
-  .nutrition-table .row:last-of-type {
-    border-bottom: none;
-  }
-
-  .nutrition-table .row .col {
-    width: 50%;
-    padding: 10px 25px;
-  }
-
-  .nutrition-table .row .col.value {
-    color: var(--primary-color-nutmeg);
-    font-weight: 600;
   }
 }
